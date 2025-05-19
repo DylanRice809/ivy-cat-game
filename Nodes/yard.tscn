@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo8ksmeliqp56"]
+
+[ext_resource type="PackedScene" uid="uid://dk06b41u0i687" path="res://Nodes/dialog_box.tscn" id="1_rkhsl"]
+
+[node name="Yard" type="Node2D"]
+
+[node name="DialogBox" parent="." instance=ExtResource("1_rkhsl")]
