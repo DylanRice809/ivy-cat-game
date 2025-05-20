@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo8ksmeliqp56"]
+[gd_scene load_steps=3 format=3 uid="uid://bo8ksmeliqp56"]
 
-[ext_resource type="PackedScene" uid="uid://dk06b41u0i687" path="res://Nodes/dialog_box.tscn" id="1_rkhsl"]
+[ext_resource type="Script" uid="uid://l4y52u4jepeh" path="res://Scripts/control.gd" id="1_rkhsl"]
+[ext_resource type="PackedScene" uid="uid://cqanugdt53q8c" path="res://Nodes/cat.tscn" id="2_qnni1"]
 
 [node name="Yard" type="Node2D"]
+script = ExtResource("1_rkhsl")
 
-[node name="DialogBox" parent="." instance=ExtResource("1_rkhsl")]
+[node name="Cat" parent="." instance=ExtResource("2_qnni1")]

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dk06b41u0i687"]
+[gd_scene load_steps=4 format=3 uid="uid://dk06b41u0i687"]
 
 [ext_resource type="Script" uid="uid://dgunflxdpbj1f" path="res://Scripts/Singletons/dialog_box.gd" id="1_g7vb7"]
+[ext_resource type="Texture2D" uid="uid://mudkm4iadpmo" path="res://Assets/Cats/Portraits/cat_placeholder.png" id="2_g7vb7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7vb7"]
 bg_color = Color(0.869978, 0.438761, 0.594958, 1)
 
 [node name="DialogBox" type="Control"]
+top_level = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,13 +25,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_g7vb7")
 
-[node name="Portrait" type="Panel" parent="Background"]
+[node name="Portrait" type="TextureRect" parent="Background"]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 200.0
 offset_bottom = 200.0
+texture = ExtResource("2_g7vb7")
+expand_mode = 1
 
 [node name="Question" type="Label" parent="Background"]
 layout_mode = 1

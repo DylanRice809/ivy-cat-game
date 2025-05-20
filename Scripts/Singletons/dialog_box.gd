@@ -21,6 +21,8 @@ func on_cat_chosen(cat: Cat):
 		await button_pressed
 		current_output = cat.dialog_tree.get_next(user_input)
 		instantiate_buttons(current_output)
+	
+	queue_free()
 
 func instantiate_buttons(current_output):
 	if current_output[0] != "EXIT":
@@ -31,6 +33,8 @@ func instantiate_buttons(current_output):
 		for n in answers.get_children():
 			answers.remove_child(n)
 			n.queue_free()
+		for n in range(len(response_buttons)):
+			response_buttons.remove_at(0)
 		
 		for i in range(1, len(current_output)):
 			# For rest of current_output, create a button, then assign value
